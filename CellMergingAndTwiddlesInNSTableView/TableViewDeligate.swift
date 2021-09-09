@@ -7,53 +7,77 @@
 
 import Cocoa
 
-extension ViewController: NSTableViewDelegate {
+fileprivate enum CellIdentifiers : String {
     
-    fileprivate enum CellIdentifiers : String {
+    case pageCell    = "pageCol"
+    case commentCell = "commentCol"
+    case titleRow    = "titleRow"
+
+    var isTitleRow: Bool { get { return self == .titleRow } }
+    
+    var uiiId: NSUserInterfaceItemIdentifier {
+        get { switch self {
+        case .titleRow : return NSUserInterfaceItemIdentifier(CellIdentifiers.pageCell.rawValue) // On group row, we return the first cell
+        default        : return NSUserInterfaceItemIdentifier(self.rawValue)                     // Otherwise, return associated cell
+        }}}
+}
+
+extension ViewController: NSTableViewDelegate {
+   
+    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
         
-        case pageCell    = "pageCol"
-        case commentCell = "commentCol"
-        case titleRow    = "titleRow"
-        case none        = ""
+        // Required for changing table highlighting
         
-        init(id: String) {
-            switch id {
-            case "pageCol"    : self = .pageCell
-            case "commentCol" : self = .commentCell
-            default           : self = .none
-            }
+        guard let item = tableData?[row] else { return nil }
+        
+        let retVal:TintedTableRowView? = TintedTableRowView()
+        
+        if let retVal = retVal {
+            retVal.isTitleRow = item.title != nil
         }
         
-        var uiiId: NSUserInterfaceItemIdentifier {
-            get { switch self {
-            case .titleRow : return NSUserInterfaceItemIdentifier(CellIdentifiers.pageCell.rawValue)
-            default        : return NSUserInterfaceItemIdentifier(self.rawValue)
-            }}}
+        return retVal
+    }
+    
+    func tableView(_ tableView: NSTableView, isGroupRow row: Int) -> Bool {
+        
+      //  return false  // Uncomment this to see NSAttributedString working in standard row
+        
+        guard let item = tableData?[row], let title = item.title else { return false }
+        return true // only if item exists and it's a tittle
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         
         var text: String = "Doh!"
-        var aText: NSMutableAttributedString? = nil
+        var aText: NSAttributedString? = nil
         var cellIdentifier: CellIdentifiers? = nil
         
         guard let item = tableData?[row] else { return nil }
         
-        if let tableColumn = tableColumn { cellIdentifier = CellIdentifiers.init(id: tableColumn.identifier.rawValue) }
+        if let tableColumn = tableColumn { cellIdentifier = CellIdentifiers(rawValue: String(describing: tableColumn.identifier.rawValue)) }
         else                             { cellIdentifier = CellIdentifiers.pageCell } // When "groupRow" is true there is no column, so use first column whatever that is
 
+        if let _ = item.title { cellIdentifier = CellIdentifiers.titleRow } // hack
+        
         guard let cellIdentifier = cellIdentifier else { return nil }
         
-        if let cell:NSTableCellView = tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView {
+        if let cell = tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView {
             
             switch cellIdentifier {
-            case .pageCell: text = item.page?.description ?? "page unk"
-            case .commentCell: text = item.comment ?? "comment unk"
-            case .titleRow: text = item.title ?? "title unk"
-            default: text = "should never happen"
+            
+            case .pageCell:     text = item.page?.description ?? "page unk"; break
+            case .commentCell:  text = item.comment ?? "comment unk"; break
+                
+            case .titleRow:     text = item.title ?? "title unk"
+                                var attributes = [NSAttributedString.Key: AnyObject]()
+                                attributes[.foregroundColor] = NSColor.blue
+                                aText = NSAttributedString(string: text, attributes: attributes)
             }
             
-            cell.textField?.stringValue = text
+            if let aText = aText { cell.textField?.attributedStringValue = aText }
+            else                 { cell.textField?.stringValue = text }
+            
             return cell
         }
         return nil

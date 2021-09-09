@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.tableView(_:viewFor:row:):TableViewDeligate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cellIdentifier.uiiId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

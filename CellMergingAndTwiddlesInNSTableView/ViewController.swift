@@ -25,6 +25,7 @@ class ViewController: NSViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.floatsGroupRows = false
         
         installStubData()
         tableView.reloadData()
