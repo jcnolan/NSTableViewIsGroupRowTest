@@ -24,6 +24,9 @@
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <action selector="twiddleAction:" target="c22-O7-iKe" id="9jG-9f-UNj"/>
+                    </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" id="d6K-e5-cho">
                     <rect key="frame" x="20" y="0.0" width="460" height="24"/>
@@ -33,6 +36,9 @@
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <action selector="titleAction:" target="c22-O7-iKe" id="XHf-nV-FG5"/>
+                    </connections>
                 </textField>
             </subviews>
             <connections>

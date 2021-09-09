@@ -13,6 +13,13 @@ class TintedTableCellView: NSTableCellView {
     @IBOutlet var twiddle: NSTextField!
     @IBOutlet var title: NSTextField!
     
+    @IBAction func twiddleAction(_ sender: Any) {
+        print("twiddle")
+    }
+    @IBAction func titleAction(_ sender: Any) {
+        print("title")
+    }
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSubviews()
@@ -24,7 +31,7 @@ class TintedTableCellView: NSTableCellView {
     }
     
     func initSubviews() {
-        
+
         // standard initialization logic
         // let nib = Bundle.main.loadNibNamed("TintedTableRow", owner: self, topLevelObjects: nil)
     //    let nib = NSNib(nibNamed: "TintedTableRowView", bundle: nil)
@@ -34,5 +41,23 @@ class TintedTableCellView: NSTableCellView {
         
         // custom initialization logic
     }
+    
+    func addHandlers() {
+        
+        // Add double click handler for control bar.
+        
+        let gesture = NSClickGestureRecognizer()
+        gesture.buttonMask = 0x1 // left mouse
+        gesture.numberOfClicksRequired = 1
+        gesture.target = self
+        gesture.action = #selector(clickControlBar(_:))
+        
+        self.twiddle.addGestureRecognizer(gesture)
+        self.title.addGestureRecognizer(gesture)
+    }
+    
+    @IBAction func clickControlBar(_ sender: Any) {
+        //toggleState()
+       print("click")
+    }
 }
-

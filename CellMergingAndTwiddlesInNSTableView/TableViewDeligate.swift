@@ -70,13 +70,17 @@ extension ViewController: NSTableViewDelegate {
             case .commentCell:  text = item.comment ?? "comment unk"; break
                 
             case .titleRow:     text = item.title ?? "title unk"
-                                var attributes = [NSAttributedString.Key: AnyObject]()
-                                attributes[.foregroundColor] = NSColor.blue
-                                aText = NSAttributedString(string: text, attributes: attributes)
-         //       let cell2 = TintedTableCellView()
-                let cell3 = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("TintedTableCellView"), owner: nil) as? TintedTableCellView
-                cell3?.title.attributedStringValue = aText!
-                cell = cell3!
+                var attributes = [NSAttributedString.Key: AnyObject]()
+                attributes[.foregroundColor] = NSColor.blue
+                aText = NSAttributedString(string: text, attributes: attributes)
+                //       let cell2 = TintedTableCellView()
+                // https://stackoverflow.com/questions/53868435/how-to-create-a-custom-nstablecellview-from-a-nib
+                if let cell3 = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("TintedTableCellView"), owner: nil) as? TintedTableCellView
+                {
+                    cell3.addHandlers()
+                    cell3.title.attributedStringValue = aText!
+                    cell = cell3
+                }
                 
                 
             }
