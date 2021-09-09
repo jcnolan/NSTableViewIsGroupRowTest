@@ -27,6 +27,9 @@ class ViewController: NSViewController {
         tableView.dataSource = self
         tableView.floatsGroupRows = false
         
+        let customCellNib = NSNib.init(nibNamed: "TintedTableCellView", bundle: nil)
+        tableView.register(customCellNib, forIdentifier: NSUserInterfaceItemIdentifier("TintedTableCellView"))
+                
         installStubData()
         tableView.reloadData()
     }

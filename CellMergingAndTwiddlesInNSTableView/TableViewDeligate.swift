@@ -62,7 +62,7 @@ extension ViewController: NSTableViewDelegate {
         
         guard let cellIdentifier = cellIdentifier else { return nil }
         
-        if let cell = tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView {
+        if var cell = tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView {
             
             switch cellIdentifier {
             
@@ -73,6 +73,12 @@ extension ViewController: NSTableViewDelegate {
                                 var attributes = [NSAttributedString.Key: AnyObject]()
                                 attributes[.foregroundColor] = NSColor.blue
                                 aText = NSAttributedString(string: text, attributes: attributes)
+         //       let cell2 = TintedTableCellView()
+                let cell3 = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("TintedTableCellView"), owner: nil) as? TintedTableCellView
+                cell3?.title.attributedStringValue = aText!
+                cell = cell3!
+                
+                
             }
             
             if let aText = aText { cell.textField?.attributedStringValue = aText }
