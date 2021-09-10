@@ -72,6 +72,7 @@ extension ViewController: NSTableViewDelegate {
             case .titleRow:     text = item.title ?? "title unk"
                 var attributes = [NSAttributedString.Key: AnyObject]()
                 attributes[.foregroundColor] = NSColor.blue
+                attributes[.font] = NSFont.boldSystemFont(ofSize: 13.0)
                 aText = NSAttributedString(string: text, attributes: attributes)
                 //       let cell2 = TintedTableCellView()
                 // https://stackoverflow.com/questions/53868435/how-to-create-a-custom-nstablecellview-from-a-nib
@@ -79,6 +80,7 @@ extension ViewController: NSTableViewDelegate {
                 {
                     cell3.addHandlers()
                     cell3.title.attributedStringValue = aText!
+                    cell3.twiddle.stringValue = "▼"
                     cell = cell3
                 }
                 
