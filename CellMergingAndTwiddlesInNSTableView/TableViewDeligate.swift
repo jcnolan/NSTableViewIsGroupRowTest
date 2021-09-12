@@ -83,8 +83,6 @@ extension ViewController: NSTableViewDelegate {
                     cell3.twiddle.stringValue = "▼"
                     cell = cell3
                 }
-                
-                
             }
             
             if let aText = aText { cell.textField?.attributedStringValue = aText }
