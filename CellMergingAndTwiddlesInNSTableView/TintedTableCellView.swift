@@ -23,11 +23,13 @@ class TintedTableCellView: NSTableCellView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSubviews()
+      //  addHandlers()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initSubviews()
+     //   initSubviews()
+        addHandlers()
     }
     
     func initSubviews() {

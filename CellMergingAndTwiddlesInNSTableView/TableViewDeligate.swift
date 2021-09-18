@@ -56,7 +56,8 @@ extension ViewController: NSTableViewDelegate {
         guard let item = tableData?[row] else { return nil }
         
         if let tableColumn = tableColumn { cellIdentifier = CellIdentifiers(rawValue: String(describing: tableColumn.identifier.rawValue)) }
-        else                             { cellIdentifier = CellIdentifiers.titleRow } // When "groupRow" is true there is no column, so use first column whatever that is
+        else                             {
+            cellIdentifier = CellIdentifiers.titleRow } // When "groupRow" is true there is no column, so use first column whatever that is
 
         if let _ = item.title { cellIdentifier = CellIdentifiers.titleRow } // hack
         
@@ -75,7 +76,7 @@ extension ViewController: NSTableViewDelegate {
                 
             case .titleRow:     text = item.title ?? "title unk"
                 var attributes = [NSAttributedString.Key: AnyObject]()
-                attributes[.foregroundColor] = NSColor.blue
+                attributes[.foregroundColor] = NSColor.white
                 attributes[.font] = NSFont.boldSystemFont(ofSize: 13.0)
                 aText = NSAttributedString(string: text, attributes: attributes)
                 //       let cell2 = TintedTableCellView()

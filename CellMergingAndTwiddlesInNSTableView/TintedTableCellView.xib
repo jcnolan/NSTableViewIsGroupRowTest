@@ -23,11 +23,14 @@
                         <constraint firstAttribute="width" constant="12" id="f4O-rx-uTH"/>
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="favpng_triangle-arrow right" id="mGI-m2-Xf7"/>
+                    <connections>
+                        <action selector="twiddleAction:" target="c22-O7-iKe" id="9kn-jw-5uM"/>
+                    </connections>
                 </imageView>
                 <textField verticalHuggingPriority="750" id="d6K-e5-cho">
                     <rect key="frame" x="19" y="-1" width="1296" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="This is the title" id="Anb-kK-azi">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" alignment="left" title="This is the title" id="Anb-kK-azi">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
