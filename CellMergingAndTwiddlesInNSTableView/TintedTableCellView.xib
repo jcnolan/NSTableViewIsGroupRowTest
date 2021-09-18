@@ -16,18 +16,14 @@
             <rect key="frame" x="0.0" y="0.0" width="1448" height="22"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" id="kHc-il-vth">
-                    <rect key="frame" x="-2" y="-8" width="28" height="23"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="►" placeholderString="►" id="ZCr-5w-058">
-                        <font key="font" usesAppearanceFont="YES"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                    <connections>
-                        <action selector="twiddleAction:" target="c22-O7-iKe" id="9jG-9f-UNj"/>
-                    </connections>
-                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VyG-EC-9xl">
+                    <rect key="frame" x="5" y="5" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="B4m-Eu-xAt"/>
+                        <constraint firstAttribute="width" constant="12" id="f4O-rx-uTH"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="mGI-m2-Xf7"/>
+                </imageView>
                 <textField verticalHuggingPriority="750" id="d6K-e5-cho">
                     <rect key="frame" x="19" y="-1" width="1296" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -37,13 +33,16 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <action selector="titleAction:" target="c22-O7-iKe" id="CfR-j1-8uX"/>
+                        <action selector="twiddleAction:" target="c22-O7-iKe" id="zC4-DI-cJk"/>
                     </connections>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="VyG-EC-9xl" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="5" id="6vc-UJ-LPa"/>
+                <constraint firstItem="VyG-EC-9xl" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="8AK-JO-XKA"/>
+            </constraints>
             <connections>
                 <outlet property="title" destination="d6K-e5-cho" id="LON-fK-Jbw"/>
-                <outlet property="twiddle" destination="kHc-il-vth" id="oYk-7r-D3o"/>
             </connections>
             <point key="canvasLocation" x="624" y="107"/>
         </customView>
