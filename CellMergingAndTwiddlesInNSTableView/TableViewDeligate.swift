@@ -84,6 +84,7 @@ extension ViewController: NSTableViewDelegate {
                 if let cell3 = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("TintedTableCellView"), owner: nil) as? TintedTableCellView
                 {
                     cell3.addHandlers()
+                    cell3.parent = self
                     cell3.title.attributedStringValue = aText!
            //         cell3.twiddle.stringValue = "▼"
                     cell = cell3

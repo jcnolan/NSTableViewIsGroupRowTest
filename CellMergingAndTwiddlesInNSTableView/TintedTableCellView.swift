@@ -13,6 +13,8 @@ class TintedTableCellView: NSTableCellView {
     @IBOutlet var twiddle: NSImageView!
     @IBOutlet var title: NSTextField!
     
+    var parent: ViewController? = nil
+    
     @IBAction func twiddleAction(_ sender: Any) {
         print("twiddle")
     }
