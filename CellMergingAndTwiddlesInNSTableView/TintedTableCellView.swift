@@ -10,7 +10,7 @@ import Cocoa
 class TintedTableCellView: NSTableCellView {
     
  //   @IBOutlet var contentView: TintedTableCellView!
-    @IBOutlet var twiddle: NSTextField!
+    @IBOutlet var twiddle: NSImageView!
     @IBOutlet var title: NSTextField!
     
     @IBAction func twiddleAction(_ sender: Any) {

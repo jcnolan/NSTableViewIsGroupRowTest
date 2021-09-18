@@ -17,6 +17,7 @@
 		8966CB4326EA638C000B8E84 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966CB4226EA638C000B8E84 /* TableViewDataSource.swift */; };
 		8966CB4526EA639F000B8E84 /* TableViewDeligate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966CB4426EA639F000B8E84 /* TableViewDeligate.swift */; };
 		8966CB4726EA63FC000B8E84 /* TableDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966CB4626EA63FC000B8E84 /* TableDataItem.swift */; };
+		89BE57EF26F65C81008ADDAD /* SentenceTableTitleRowCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BE57EE26F65C81008ADDAD /* SentenceTableTitleRowCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		8966CB4226EA638C000B8E84 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		8966CB4426EA639F000B8E84 /* TableViewDeligate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDeligate.swift; sourceTree = "<group>"; };
 		8966CB4626EA63FC000B8E84 /* TableDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataItem.swift; sourceTree = "<group>"; };
+		89BE57EE26F65C81008ADDAD /* SentenceTableTitleRowCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceTableTitleRowCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			children = (
 				8966CB3226EA60FE000B8E84 /* AppDelegate.swift */,
 				8966CB3426EA60FE000B8E84 /* ViewController.swift */,
+				89BE57EE26F65C81008ADDAD /* SentenceTableTitleRowCellView.swift */,
 				8966CB4626EA63FC000B8E84 /* TableDataItem.swift */,
 				8966CB4226EA638C000B8E84 /* TableViewDataSource.swift */,
 				8966CB4426EA639F000B8E84 /* TableViewDeligate.swift */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89BE57EF26F65C81008ADDAD /* SentenceTableTitleRowCellView.swift in Sources */,
 				8966CB4526EA639F000B8E84 /* TableViewDeligate.swift in Sources */,
 				8966CB4726EA63FC000B8E84 /* TableDataItem.swift in Sources */,
 				8966CB4326EA638C000B8E84 /* TableViewDataSource.swift in Sources */,

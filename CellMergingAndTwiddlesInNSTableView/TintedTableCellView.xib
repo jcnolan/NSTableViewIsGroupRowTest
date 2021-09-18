@@ -22,7 +22,7 @@
                         <constraint firstAttribute="height" constant="12" id="B4m-Eu-xAt"/>
                         <constraint firstAttribute="width" constant="12" id="f4O-rx-uTH"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="mGI-m2-Xf7"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="favpng_triangle-arrow right" id="mGI-m2-Xf7"/>
                 </imageView>
                 <textField verticalHuggingPriority="750" id="d6K-e5-cho">
                     <rect key="frame" x="19" y="-1" width="1296" height="16"/>
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <action selector="twiddleAction:" target="c22-O7-iKe" id="zC4-DI-cJk"/>
+                        <action selector="titleAction:" target="c22-O7-iKe" id="zWk-HY-JuZ"/>
                     </connections>
                 </textField>
             </subviews>
@@ -43,8 +43,12 @@
             </constraints>
             <connections>
                 <outlet property="title" destination="d6K-e5-cho" id="LON-fK-Jbw"/>
+                <outlet property="twiddle" destination="VyG-EC-9xl" id="lX8-Qh-QRi"/>
             </connections>
             <point key="canvasLocation" x="624" y="107"/>
         </customView>
     </objects>
+    <resources>
+        <image name="favpng_triangle-arrow right" width="2400" height="2400"/>
+    </resources>
 </document>

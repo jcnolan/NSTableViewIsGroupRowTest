@@ -56,11 +56,15 @@ extension ViewController: NSTableViewDelegate {
         guard let item = tableData?[row] else { return nil }
         
         if let tableColumn = tableColumn { cellIdentifier = CellIdentifiers(rawValue: String(describing: tableColumn.identifier.rawValue)) }
-        else                             { cellIdentifier = CellIdentifiers.pageCell } // When "groupRow" is true there is no column, so use first column whatever that is
+        else                             { cellIdentifier = CellIdentifiers.titleRow } // When "groupRow" is true there is no column, so use first column whatever that is
 
         if let _ = item.title { cellIdentifier = CellIdentifiers.titleRow } // hack
         
         guard let cellIdentifier = cellIdentifier else { return nil }
+        
+    //    var cell = cellIdentifier == CellIdentifiers.titleRow
+    //        ? tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? SentenceTableTitleRowCellView
+    //        : tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView
         
         if var cell = tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView {
             
@@ -80,7 +84,7 @@ extension ViewController: NSTableViewDelegate {
                 {
                     cell3.addHandlers()
                     cell3.title.attributedStringValue = aText!
-                    cell3.twiddle.stringValue = "▼"
+           //         cell3.twiddle.stringValue = "▼"
                     cell = cell3
                 }
             }
