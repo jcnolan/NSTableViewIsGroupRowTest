@@ -39,21 +39,33 @@ class ViewController: NSViewController {
         tableView.reloadData()
     }
     
-    @objc private func onItemClicked() {
+    @objc private func onItemClicked()
+    {
         print("row \(tableView.clickedRow), col \(tableView.clickedColumn) clicked")
-        let clickBounds = window.mouseLocationOutsideOfEventStream
-        print("Click: \(clickBounds)")
-        let foo = window.currentEvent
-        //   let col = tableView?(columbforidendifier)
+        let clickLocation = window.mouseLocationOutsideOfEventStream
+        print("clickLocation: \(clickLocation)")
+        
         if tableView.clickedColumn == -1 {
-            if let view = tableView.view(atColumn: 0, row: tableView.clickedRow, makeIfNecessary: false) as? TintedTableCellView {
-                let twiddleBounds = view.twiddle.bounds
-                // offset? Bounds of cell view?
-                print("in")
-                print("Bounds: \(twiddleBounds)")
-                if let parent = view.parent {
-                    let parentBounds = view.parent?.tableView.bounds
-                    print("Parent bounds: \(parentBounds)")
+            if let tableRowView = tableView.view(atColumn: 0, row: tableView.clickedRow, makeIfNecessary: false) as? TintedTableCellView {
+                let twiddleViewBounds = tableRowView.twiddle.bounds
+//                print("Bounds: \(twiddleViewBounds)")
+                let clickLocInTwiddle = self.view.convert(clickLocation, to: tableRowView.twiddle)
+                print("clickLocInTwiddle: \(clickLocInTwiddle)")
+                let twiddleBoundsRelativeToRow = tableRowView.twiddle.convert(twiddleViewBounds, to: tableRowView)
+                print("twiddleBoundsRelativeToRow: \(twiddleBoundsRelativeToRow)")
+       
+                if clickLocInTwiddle.x >= 0,
+                   clickLocInTwiddle.x <= twiddleViewBounds.width,
+                   clickLocInTwiddle.y >= 0,
+                   clickLocInTwiddle.y <= twiddleViewBounds.height {
+                    print("In \(tableView.clickedRow)")
+                    
+                    tableRowView.twiddleOpen = !tableRowView.twiddleOpen
+                    if tableRowView.twiddleOpen {tableRowView.twiddle.image = NSImage(imageLiteralResourceName: "favpng_triangle-arrow-down-white")}
+                    else                        {tableRowView.twiddle.image = NSImage(imageLiteralResourceName: "favpng_triangle-arrow-right-white")}
+                    
+                } else {
+                    print("Out \(tableView.clickedRow)")
                 }
             }
         }

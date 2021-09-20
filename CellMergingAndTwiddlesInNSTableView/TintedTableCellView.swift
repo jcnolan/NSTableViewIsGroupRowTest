@@ -14,7 +14,8 @@ class TintedTableCellView: NSTableCellView {
     @IBOutlet var title: NSTextField!
     
     var parent: ViewController? = nil
-    
+    var twiddleOpen = true
+
     @IBAction func twiddleAction(_ sender: Any) {
         print("twiddle")
     }
