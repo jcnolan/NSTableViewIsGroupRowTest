@@ -17,6 +17,8 @@ class ViewController: NSViewController {
 
     var tableData: [TableDataItem]? = nil
     
+    lazy var window: NSWindow = self.view.window!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -30,8 +32,31 @@ class ViewController: NSViewController {
         let customCellNib = NSNib.init(nibNamed: "TintedTableCellView", bundle: nil)
         tableView.register(customCellNib, forIdentifier: NSUserInterfaceItemIdentifier("TintedTableCellView"))
                 
+        tableView.target = self
+        tableView.action = #selector(onItemClicked)
+        
         installStubData()
         tableView.reloadData()
+    }
+    
+    @objc private func onItemClicked() {
+        print("row \(tableView.clickedRow), col \(tableView.clickedColumn) clicked")
+        let clickBounds = window.mouseLocationOutsideOfEventStream
+        print("Click: \(clickBounds)")
+        let foo = window.currentEvent
+        //   let col = tableView?(columbforidendifier)
+        if tableView.clickedColumn == -1 {
+            if let view = tableView.view(atColumn: 0, row: tableView.clickedRow, makeIfNecessary: false) as? TintedTableCellView {
+                let twiddleBounds = view.twiddle.bounds
+                // offset? Bounds of cell view?
+                print("in")
+                print("Bounds: \(twiddleBounds)")
+                if let parent = view.parent {
+                    let parentBounds = view.parent?.tableView.bounds
+                    print("Parent bounds: \(parentBounds)")
+                }
+            }
+        }
     }
     
     func installStubData() {

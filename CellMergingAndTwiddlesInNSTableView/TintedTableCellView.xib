@@ -22,7 +22,7 @@
                         <constraint firstAttribute="height" constant="12" id="B4m-Eu-xAt"/>
                         <constraint firstAttribute="width" constant="12" id="f4O-rx-uTH"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="favpng_triangle-arrow right" id="mGI-m2-Xf7"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="favpng_triangle-arrow-down-white" id="mGI-m2-Xf7"/>
                     <connections>
                         <action selector="twiddleAction:" target="c22-O7-iKe" id="9kn-jw-5uM"/>
                     </connections>
@@ -52,6 +52,6 @@
         </customView>
     </objects>
     <resources>
-        <image name="favpng_triangle-arrow right" width="2400" height="2400"/>
+        <image name="favpng_triangle-arrow-down-white" width="2400" height="2400"/>
     </resources>
 </document>

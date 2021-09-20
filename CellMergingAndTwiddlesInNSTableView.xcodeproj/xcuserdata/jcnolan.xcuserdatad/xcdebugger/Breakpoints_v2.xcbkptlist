@@ -14,8 +14,8 @@
             filePath = "CellMergingAndTwiddlesInNSTableView/TableViewDeligate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "tableView(_:viewFor:row:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "CellMergingAndTwiddlesInNSTableView/TableViewDeligate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "tableView(_:viewFor:row:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "CellMergingAndTwiddlesInNSTableView/TableViewDeligate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "tableView(_:viewFor:row:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,14 +72,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4D531F7E-7451-4434-A5C0-1842C2EAF82A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CellMergingAndTwiddlesInNSTableView/TintedTableCellView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "addHandlers()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,10 +94,10 @@
             filePath = "CellMergingAndTwiddlesInNSTableView/TintedTableCellView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "clickControlBar(_:)"
-            landmarkType = "7">
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "TintedTableCellView"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -113,6 +113,226 @@
             startingLineNumber = "19"
             endingLineNumber = "19"
             landmarkName = "twiddleAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97A808EB-170F-4C0C-8204-6F845DAF908A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CellMergingAndTwiddlesInNSTableView/TableViewDeligate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "tableView(_:rowViewForRow:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25F152D2-3CAB-4A61-970C-96F3654CD657"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CellMergingAndTwiddlesInNSTableView/TintedTableRowView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "TintedTableRowView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "25F152D2-3CAB-4A61-970C-96F3654CD657 - 74e89086d95775b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CellMergingAndTwiddlesInNSTableView.TintedTableRowView.isTitleRow.getter : Swift.Bool"
+                  moduleName = "CellMergingAndTwiddlesInNSTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jcnolan/Projects/Swift/projects/Samples/CellMergingAndTwiddlesInNSTableView/CellMergingAndTwiddlesInNSTableView/TintedTableRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "25F152D2-3CAB-4A61-970C-96F3654CD657 - 37611d8710e2ad8c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CellMergingAndTwiddlesInNSTableView.TintedTableRowView.isTitleRow.setter : Swift.Bool"
+                  moduleName = "CellMergingAndTwiddlesInNSTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jcnolan/Projects/Swift/projects/Samples/CellMergingAndTwiddlesInNSTableView/CellMergingAndTwiddlesInNSTableView/TintedTableRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "118">
+               </Location>
+               <Location
+                  uuid = "25F152D2-3CAB-4A61-970C-96F3654CD657 - 70abbe32b957adc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CellMergingAndTwiddlesInNSTableView.TintedTableRowView.isTitleRow.modify : Swift.Bool"
+                  moduleName = "CellMergingAndTwiddlesInNSTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jcnolan/Projects/Swift/projects/Samples/CellMergingAndTwiddlesInNSTableView/CellMergingAndTwiddlesInNSTableView/TintedTableRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "25F152D2-3CAB-4A61-970C-96F3654CD657 - cb2c15e0a9691831"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CellMergingAndTwiddlesInNSTableView.TintedTableRowView.isTitleRow.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CellMergingAndTwiddlesInNSTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jcnolan/Projects/Swift/projects/Samples/CellMergingAndTwiddlesInNSTableView/CellMergingAndTwiddlesInNSTableView/TintedTableRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "25F152D2-3CAB-4A61-970C-96F3654CD657 - 8d1d796b97a23e1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CellMergingAndTwiddlesInNSTableView.TintedTableRowView.init(frame: __C.CGRect) -&gt; CellMergingAndTwiddlesInNSTableView.TintedTableRowView"
+                  moduleName = "CellMergingAndTwiddlesInNSTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jcnolan/Projects/Swift/projects/Samples/CellMergingAndTwiddlesInNSTableView/CellMergingAndTwiddlesInNSTableView/TintedTableRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "25F152D2-3CAB-4A61-970C-96F3654CD657 - 2d07b24acf7764b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CellMergingAndTwiddlesInNSTableView.TintedTableRowView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CellMergingAndTwiddlesInNSTableView.TintedTableRowView&gt;"
+                  moduleName = "CellMergingAndTwiddlesInNSTableView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jcnolan/Projects/Swift/projects/Samples/CellMergingAndTwiddlesInNSTableView/CellMergingAndTwiddlesInNSTableView/TintedTableRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "98">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0EB51B2-6379-48CA-92BD-97B53F8EA024"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CellMergingAndTwiddlesInNSTableView/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "onItemClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA61C503-F805-4A13-AD19-45F47401C4C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CellMergingAndTwiddlesInNSTableView/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "onItemClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4668DB2-B3F6-4B29-9481-956FD706A488"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CellMergingAndTwiddlesInNSTableView/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "onItemClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E2BBC84-AE4E-406C-8862-265FF37712DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CellMergingAndTwiddlesInNSTableView/TintedTableCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "onItemClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1EE2B3B8-0F0A-4AD0-86BF-44232E6E5A77"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CellMergingAndTwiddlesInNSTableView/TintedTableCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "onItemClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "903DB546-5575-4CF8-9F37-EEAA696D280C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CellMergingAndTwiddlesInNSTableView/TintedTableCellView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "addHandlers()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
