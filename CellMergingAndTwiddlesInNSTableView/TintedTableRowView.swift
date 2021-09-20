@@ -18,8 +18,7 @@ class TintedTableRowView: NSTableRowView {
             var bgcol:NSColor = NSColor.clear
             
             switch isTitleRow {
-//            case true: bgcol = NSColor.lightGray
-            case true: bgcol = NSColor.cyan
+            case true: bgcol = NSColor.lightGray
             default:   bgcol = NSColor.clear }
             
             let selectionRect = NSInsetRect(self.bounds, 0, 0)
