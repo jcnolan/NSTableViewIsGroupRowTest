@@ -13,10 +13,10 @@ class CMTViewController: NSViewController {
     
     @IBOutlet var links: TermTextView!
     @IBOutlet var console: NSTextField!
+  
+    var myDensSeeItem: DensSeeTermHelper.DensSeeItem? = nil
     
-    @IBAction func onTest(_ sender: Any) {
-        
-        links.textStorage?.setAttributedString(NSAttributedString(string: "Hello world..."))
+    func setDensSeeItem() {
         
         let myTermFreqs: PidsByTerm = [
             "exception":["3.1573-3.1582,148.24200000000002,147.9014,47.81,11.169999999999987"],
@@ -63,9 +63,18 @@ class CMTViewController: NSViewController {
             ]
         ]
         
-        let myDensSeeItem = DensSeeTermHelper.getDensSeeItemForFreqs(myTermFreqsForPage: myTermFreqs, mySearchTermFreqsForPage: mySearchTermFreqs)
+        myDensSeeItem = DensSeeTermHelper.getDensSeeItemForFreqs(myTermFreqsForPage: myTermFreqs, mySearchTermFreqsForPage: mySearchTermFreqs)
+    }
+    
+    @IBAction func onTest(_ sender: Any) {
         
-        links.textStorage?.setAttributedString(myDensSeeItem.freqStr)
+        links.textStorage?.setAttributedString(NSAttributedString(string: "Hello world..."))
+        
+        if myDensSeeItem == nil { setDensSeeItem() }
+        
+        if let myDensSeeItem = myDensSeeItem {
+            links.textStorage?.setAttributedString(myDensSeeItem.freqStr)
+        }
     }
     
     @IBAction func onExit(_ sender: Any) {
@@ -94,7 +103,8 @@ class CMTViewController: NSViewController {
         tableView.target = self
         tableView.action = #selector(onItemClicked)
         
-        links.termsController = self
+        setDensSeeItem()
+        links.parent = self
         
         installStubData()
         tableView.reloadData()

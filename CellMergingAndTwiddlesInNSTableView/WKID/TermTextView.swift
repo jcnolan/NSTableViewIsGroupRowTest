@@ -11,7 +11,7 @@ import Cocoa
 class TermTextView: NSTextView {
 // -no    class TermTextView: NSTextField {
 
-    weak var termsController: CMTViewController!
+    weak var parent: CMTViewController!
  //   weak var termsNuController: DensSeeNuViewController!
 
     var row: Int!
@@ -24,7 +24,7 @@ class TermTextView: NSTextView {
     
     override func mouseDown(with event: NSEvent) {
         super.mouseDown(with: event)
-        if let termsController = termsController {
+        if let termsController = parent {
             if let term = termsController.clickSubPhrase(in: self, event: event, row: row) {
                 termsController.console.stringValue = "\"\(term)\" clicked..."
             }

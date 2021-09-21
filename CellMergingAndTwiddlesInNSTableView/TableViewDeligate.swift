@@ -11,6 +11,7 @@ fileprivate enum CellIdentifiers : String {
     
     case pageCell    = "pageCol"
     case commentCell = "commentCol"
+    case termsCell   = "termsCol"
     case titleRow    = "titleRow"
 
     var isTitleRow: Bool { get { return self == .titleRow } }
@@ -67,13 +68,34 @@ extension CMTViewController: NSTableViewDelegate {
     //        ? tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? SentenceTableTitleRowCellView
     //        : tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView
         
+       /*
+        
+        print("Cell identifier: \(cellIdentifier)")
+        
+        if cellIdentifier == .termsCell && false {
+            
+            if let cell3 = tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? TermTextView
+            {
+                //   cell3.addHandlers()
+                cell3.parent = self
+                cell3.textStorage?.setAttributedString(myDensSeeItem!.freqStr)
+                
+                //         cell3.twiddle.stringValue = "▼"
+                //  cell = cell3
+                return cell3
+            }
+            
+        } else {
+        
+        */
+
         if var cell = tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView {
             
             switch cellIdentifier {
             
             case .pageCell:     text = item.page?.description ?? "page unk"; break
             case .commentCell:  text = item.comment ?? "comment unk"; break
-                
+            case .termsCell:    aText = myDensSeeItem?.freqStr; print(aText); break
             case .titleRow:     text = item.title ?? "title unk"
                 var attributes = [NSAttributedString.Key: AnyObject]()
                 attributes[.foregroundColor] = NSColor.white
