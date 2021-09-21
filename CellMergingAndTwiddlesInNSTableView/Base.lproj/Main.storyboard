@@ -805,7 +805,7 @@
                                                                     </textFieldCell>
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
-                                                                        <tableCellView id="BJu-s7-xz4">
+                                                                        <tableCellView id="BJu-s7-xz4" customClass="TextViewTableCellView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
                                                                             <rect key="frame" x="354" y="0.0" width="195" height="24"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
