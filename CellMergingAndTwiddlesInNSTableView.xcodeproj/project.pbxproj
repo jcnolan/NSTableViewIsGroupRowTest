@@ -10,6 +10,9 @@
 		89170C7726EA8F5500C8CF54 /* TintedTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89170C7626EA8F5500C8CF54 /* TintedTableRowView.swift */; };
 		89170C7A26EAC4EC00C8CF54 /* TintedTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89170C7826EABE8D00C8CF54 /* TintedTableCellView.xib */; };
 		89170C7C26EAC93400C8CF54 /* TintedTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89170C7B26EAC93400C8CF54 /* TintedTableCellView.swift */; };
+		894EF35626FA69CE0075C41D /* DensSeeTermHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EF35526FA69CE0075C41D /* DensSeeTermHelper.swift */; };
+		894EF35A26FA6B840075C41D /* KosTextDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EF35926FA6B840075C41D /* KosTextDecoration.swift */; };
+		894EF35D26FA6EB70075C41D /* KosNotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EF35C26FA6EB70075C41D /* KosNotificationKeys.swift */; };
 		8966CB3326EA60FE000B8E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966CB3226EA60FE000B8E84 /* AppDelegate.swift */; };
 		8966CB3526EA60FE000B8E84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966CB3426EA60FE000B8E84 /* ViewController.swift */; };
 		8966CB3726EA60FF000B8E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8966CB3626EA60FF000B8E84 /* Assets.xcassets */; };
@@ -24,6 +27,10 @@
 		89170C7626EA8F5500C8CF54 /* TintedTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintedTableRowView.swift; sourceTree = "<group>"; };
 		89170C7826EABE8D00C8CF54 /* TintedTableCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TintedTableCellView.xib; sourceTree = "<group>"; };
 		89170C7B26EAC93400C8CF54 /* TintedTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintedTableCellView.swift; sourceTree = "<group>"; };
+		894EF35526FA69CE0075C41D /* DensSeeTermHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DensSeeTermHelper.swift; sourceTree = "<group>"; };
+		894EF35726FA6A930075C41D /* KosTextDecoration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KosTextDecoration.swift; path = "../../../WKIDTech/WKID/WKID/Common/Helpers/UI Helpters/KosTextDecoration.swift"; sourceTree = "<group>"; };
+		894EF35926FA6B840075C41D /* KosTextDecoration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KosTextDecoration.swift; sourceTree = "<group>"; };
+		894EF35C26FA6EB70075C41D /* KosNotificationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KosNotificationKeys.swift; sourceTree = "<group>"; };
 		8966CB2F26EA60FE000B8E84 /* CellMergingAndTwiddlesInNSTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellMergingAndTwiddlesInNSTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8966CB3226EA60FE000B8E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8966CB3426EA60FE000B8E84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		894EF35826FA6B840075C41D /* WKID */ = {
+			isa = PBXGroup;
+			children = (
+				894EF35526FA69CE0075C41D /* DensSeeTermHelper.swift */,
+				894EF35C26FA6EB70075C41D /* KosNotificationKeys.swift */,
+				894EF35926FA6B840075C41D /* KosTextDecoration.swift */,
+			);
+			path = WKID;
+			sourceTree = "<group>";
+		};
 		8966CB2626EA60FE000B8E84 = {
 			isa = PBXGroup;
 			children = (
@@ -74,12 +91,14 @@
 				8966CB4226EA638C000B8E84 /* TableViewDataSource.swift */,
 				8966CB4426EA639F000B8E84 /* TableViewDeligate.swift */,
 				89170C7626EA8F5500C8CF54 /* TintedTableRowView.swift */,
+				894EF35726FA6A930075C41D /* KosTextDecoration.swift */,
 				89170C7B26EAC93400C8CF54 /* TintedTableCellView.swift */,
 				89170C7826EABE8D00C8CF54 /* TintedTableCellView.xib */,
 				8966CB3626EA60FF000B8E84 /* Assets.xcassets */,
 				8966CB3826EA60FF000B8E84 /* Main.storyboard */,
 				8966CB3B26EA60FF000B8E84 /* Info.plist */,
 				8966CB3C26EA60FF000B8E84 /* CellMergingAndTwiddlesInNSTableView.entitlements */,
+				894EF35826FA6B840075C41D /* WKID */,
 			);
 			path = CellMergingAndTwiddlesInNSTableView;
 			sourceTree = "<group>";
@@ -154,13 +173,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894EF35D26FA6EB70075C41D /* KosNotificationKeys.swift in Sources */,
 				89BE57EF26F65C81008ADDAD /* SentenceTableTitleRowCellView.swift in Sources */,
 				8966CB4526EA639F000B8E84 /* TableViewDeligate.swift in Sources */,
 				8966CB4726EA63FC000B8E84 /* TableDataItem.swift in Sources */,
 				8966CB4326EA638C000B8E84 /* TableViewDataSource.swift in Sources */,
 				8966CB3526EA60FE000B8E84 /* ViewController.swift in Sources */,
 				8966CB3326EA60FE000B8E84 /* AppDelegate.swift in Sources */,
+				894EF35626FA69CE0075C41D /* DensSeeTermHelper.swift in Sources */,
 				89170C7726EA8F5500C8CF54 /* TintedTableRowView.swift in Sources */,
+				894EF35A26FA6B840075C41D /* KosTextDecoration.swift in Sources */,
 				89170C7C26EAC93400C8CF54 /* TintedTableCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -298,8 +298,8 @@
             filePath = "CellMergingAndTwiddlesInNSTableView/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "onItemClicked()"
             landmarkType = "7">
          </BreakpointContent>
