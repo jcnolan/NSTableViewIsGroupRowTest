@@ -7,7 +7,7 @@
 
 import Cocoa
 
-extension ViewController: NSTableViewDataSource {
+extension CMTViewController: NSTableViewDataSource {
   
   func numberOfRows(in tableView: NSTableView) -> Int {
     return tableData?.count ?? 0

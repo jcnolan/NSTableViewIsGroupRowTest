@@ -5,11 +5,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner">
-            <connections>
-                <outlet property="title" destination="d6K-e5-cho" id="min-3U-pxS"/>
-            </connections>
-        </customObject>
+        <customObject id="-2" userLabel="File's Owner"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView identifier="TintedTableCellView" id="c22-O7-iKe" customClass="TintedTableCellView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
@@ -45,7 +41,7 @@
                 <constraint firstItem="VyG-EC-9xl" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="8AK-JO-XKA"/>
             </constraints>
             <connections>
-                <outlet property="title" destination="d6K-e5-cho" id="LON-fK-Jbw"/>
+                <outlet property="title" destination="d6K-e5-cho" id="YS6-YD-SQq"/>
                 <outlet property="twiddle" destination="VyG-EC-9xl" id="lX8-Qh-QRi"/>
             </connections>
             <point key="canvasLocation" x="624" y="107"/>

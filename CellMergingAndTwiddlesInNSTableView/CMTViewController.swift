@@ -7,16 +7,16 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class CMTViewController: NSViewController {
 
     @IBOutlet var tableView: NSTableView!
     
-    @IBOutlet var links: NSTextField!
+    @IBOutlet var links: TermTextView!
     @IBOutlet var console: NSTextField!
     
     @IBAction func onTest(_ sender: Any) {
         
-        links.attributedStringValue = NSAttributedString(string: "Hello world...")
+        links.textStorage?.setAttributedString(NSAttributedString(string: "Hello world..."))
         
         let myTermFreqs: PidsByTerm = [
             "exception":["3.1573-3.1582,148.24200000000002,147.9014,47.81,11.169999999999987"],
@@ -44,11 +44,28 @@ class ViewController: NSViewController {
                 "8.2843-8.2847,138.434,106.39500000000001,21.840000000000003,10.0"
             ]
         ]
-        let mySearchTermFreqs: PidsByTerm? = nil
+        let mySearchTermFreqs: PidsByTerm? = [
+            "society":[
+                "0.145-0.151,473.5119999999999,639.2763,31.124000000000024,11.169999999999959",
+                "1.1634-1.1640,257.84800000000007,393.0007,30.382000000000005,11.170000000000016",
+                "1.1765-1.1771,374.60600000000005,381.467,31.124000000000024,11.170000000000016",
+                "1.1937-1.1943,211.71200000000005,358.3997,31.124000000000024,11.170000000000016",
+                "5.367-5.373,179.76,610.6498,30.496000000000066,10.0"],
+            "base":[
+                "2.1769-2.1773,415.2020000000003,400.3053,24.464,11.170000000000016",
+                "9.2695-9.2699,228.41200000000006,162.9561,18.904000000000025,10.0",
+                "10.1243-10.1247,101.68200000000002,559.7501000000001,23.244,10.0"
+            ],
+            "order":[
+                "4.481-4.485,400.4720000000002,672.4763,23.345999999999947,11.169999999999959",
+                "6.1276-6.1280,120.57400000000001,403.96410000000003,22.793999999999983,10.0",
+                "8.2843-8.2847,138.434,106.39500000000001,21.840000000000003,10.0"
+            ]
+        ]
         
         let myDensSeeItem = DensSeeTermHelper.getDensSeeItemForFreqs(myTermFreqsForPage: myTermFreqs, mySearchTermFreqsForPage: mySearchTermFreqs)
         
-        links.attributedStringValue = myDensSeeItem.freqStr
+        links.textStorage?.setAttributedString(myDensSeeItem.freqStr)
     }
     
     @IBAction func onExit(_ sender: Any) {
@@ -77,6 +94,8 @@ class ViewController: NSViewController {
         tableView.target = self
         tableView.action = #selector(onItemClicked)
         
+        links.termsController = self
+        
         installStubData()
         tableView.reloadData()
     }
@@ -87,7 +106,7 @@ class ViewController: NSViewController {
         let clickLocation = window.mouseLocationOutsideOfEventStream
         print("clickLocation: \(clickLocation)")
         
-        if tableView.clickedColumn == -1 {
+        if tableView.clickedRow >= 0 && tableView.clickedColumn == -1 {
             if let tableRowView = tableView.view(atColumn: 0, row: tableView.clickedRow, makeIfNecessary: false) as? TintedTableCellView {
                 let twiddleViewBounds = tableRowView.twiddle.bounds
 //                print("Bounds: \(twiddleViewBounds)")

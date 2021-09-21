@@ -22,7 +22,7 @@ fileprivate enum CellIdentifiers : String {
         }}}
 }
 
-extension ViewController: NSTableViewDelegate {
+extension CMTViewController: NSTableViewDelegate {
    
     func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
         

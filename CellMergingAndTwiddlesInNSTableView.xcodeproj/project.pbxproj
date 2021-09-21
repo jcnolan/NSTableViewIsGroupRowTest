@@ -13,8 +13,11 @@
 		894EF35626FA69CE0075C41D /* DensSeeTermHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EF35526FA69CE0075C41D /* DensSeeTermHelper.swift */; };
 		894EF35A26FA6B840075C41D /* KosTextDecoration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EF35926FA6B840075C41D /* KosTextDecoration.swift */; };
 		894EF35D26FA6EB70075C41D /* KosNotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EF35C26FA6EB70075C41D /* KosNotificationKeys.swift */; };
+		894EF35F26FA87E90075C41D /* TermTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EF35E26FA87E90075C41D /* TermTextView.swift */; };
+		894EF36126FA88950075C41D /* TableViewTermClickHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EF36026FA88950075C41D /* TableViewTermClickHandler.swift */; };
+		894EF36326FA8A2B0075C41D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894EF36226FA8A2B0075C41D /* Date.swift */; };
 		8966CB3326EA60FE000B8E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966CB3226EA60FE000B8E84 /* AppDelegate.swift */; };
-		8966CB3526EA60FE000B8E84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966CB3426EA60FE000B8E84 /* ViewController.swift */; };
+		8966CB3526EA60FE000B8E84 /* CMTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966CB3426EA60FE000B8E84 /* CMTViewController.swift */; };
 		8966CB3726EA60FF000B8E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8966CB3626EA60FF000B8E84 /* Assets.xcassets */; };
 		8966CB3A26EA60FF000B8E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8966CB3826EA60FF000B8E84 /* Main.storyboard */; };
 		8966CB4326EA638C000B8E84 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8966CB4226EA638C000B8E84 /* TableViewDataSource.swift */; };
@@ -31,9 +34,12 @@
 		894EF35726FA6A930075C41D /* KosTextDecoration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KosTextDecoration.swift; path = "../../../WKIDTech/WKID/WKID/Common/Helpers/UI Helpters/KosTextDecoration.swift"; sourceTree = "<group>"; };
 		894EF35926FA6B840075C41D /* KosTextDecoration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KosTextDecoration.swift; sourceTree = "<group>"; };
 		894EF35C26FA6EB70075C41D /* KosNotificationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KosNotificationKeys.swift; sourceTree = "<group>"; };
+		894EF35E26FA87E90075C41D /* TermTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermTextView.swift; sourceTree = "<group>"; };
+		894EF36026FA88950075C41D /* TableViewTermClickHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTermClickHandler.swift; sourceTree = "<group>"; };
+		894EF36226FA8A2B0075C41D /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8966CB2F26EA60FE000B8E84 /* CellMergingAndTwiddlesInNSTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellMergingAndTwiddlesInNSTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8966CB3226EA60FE000B8E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8966CB3426EA60FE000B8E84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8966CB3426EA60FE000B8E84 /* CMTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTViewController.swift; sourceTree = "<group>"; };
 		8966CB3626EA60FF000B8E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8966CB3926EA60FF000B8E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8966CB3B26EA60FF000B8E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +64,9 @@
 		894EF35826FA6B840075C41D /* WKID */ = {
 			isa = PBXGroup;
 			children = (
+				894EF35E26FA87E90075C41D /* TermTextView.swift */,
 				894EF35526FA69CE0075C41D /* DensSeeTermHelper.swift */,
+				894EF36226FA8A2B0075C41D /* Date.swift */,
 				894EF35C26FA6EB70075C41D /* KosNotificationKeys.swift */,
 				894EF35926FA6B840075C41D /* KosTextDecoration.swift */,
 			);
@@ -85,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				8966CB3226EA60FE000B8E84 /* AppDelegate.swift */,
-				8966CB3426EA60FE000B8E84 /* ViewController.swift */,
+				8966CB3426EA60FE000B8E84 /* CMTViewController.swift */,
 				89BE57EE26F65C81008ADDAD /* SentenceTableTitleRowCellView.swift */,
 				8966CB4626EA63FC000B8E84 /* TableDataItem.swift */,
 				8966CB4226EA638C000B8E84 /* TableViewDataSource.swift */,
@@ -99,6 +107,7 @@
 				8966CB3B26EA60FF000B8E84 /* Info.plist */,
 				8966CB3C26EA60FF000B8E84 /* CellMergingAndTwiddlesInNSTableView.entitlements */,
 				894EF35826FA6B840075C41D /* WKID */,
+				894EF36026FA88950075C41D /* TableViewTermClickHandler.swift */,
 			);
 			path = CellMergingAndTwiddlesInNSTableView;
 			sourceTree = "<group>";
@@ -173,13 +182,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894EF36126FA88950075C41D /* TableViewTermClickHandler.swift in Sources */,
 				894EF35D26FA6EB70075C41D /* KosNotificationKeys.swift in Sources */,
+				894EF35F26FA87E90075C41D /* TermTextView.swift in Sources */,
 				89BE57EF26F65C81008ADDAD /* SentenceTableTitleRowCellView.swift in Sources */,
 				8966CB4526EA639F000B8E84 /* TableViewDeligate.swift in Sources */,
 				8966CB4726EA63FC000B8E84 /* TableDataItem.swift in Sources */,
 				8966CB4326EA638C000B8E84 /* TableViewDataSource.swift in Sources */,
-				8966CB3526EA60FE000B8E84 /* ViewController.swift in Sources */,
+				8966CB3526EA60FE000B8E84 /* CMTViewController.swift in Sources */,
 				8966CB3326EA60FE000B8E84 /* AppDelegate.swift in Sources */,
+				894EF36326FA8A2B0075C41D /* Date.swift in Sources */,
 				894EF35626FA69CE0075C41D /* DensSeeTermHelper.swift in Sources */,
 				89170C7726EA8F5500C8CF54 /* TintedTableRowView.swift in Sources */,
 				894EF35A26FA6B840075C41D /* KosTextDecoration.swift in Sources */,
