@@ -16,12 +16,13 @@ class TermTextView: NSTextView {
 
     var row: Int!
 
+    /* */
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
         // Drawing code here.
     }
-    
+    /* */
     override func mouseDown(with event: NSEvent) {
         super.mouseDown(with: event)
         if let termsController = parent {

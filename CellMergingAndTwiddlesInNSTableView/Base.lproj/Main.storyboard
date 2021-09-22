@@ -723,7 +723,7 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" id="nY1-Dr-zvo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="722" height="388"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="723" height="388"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -793,7 +793,7 @@
                                                                         </tableCellView>
                                                                     </prototypeCellViews>
                                                                 </tableColumn>
-                                                                <tableColumn identifier="termsCol" width="198" minWidth="40" maxWidth="1000" id="OWN-0M-W5M" userLabel="termsCol">
+                                                                <tableColumn identifier="termsCol" width="363" minWidth="40" maxWidth="1000" id="OWN-0M-W5M" userLabel="termsCol">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -806,21 +806,40 @@
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView id="BJu-s7-xz4" customClass="TextViewTableCellView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
-                                                                            <rect key="frame" x="354" y="0.0" width="195" height="24"/>
+                                                                            <rect key="frame" x="354" y="0.0" width="360" height="24"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0WC-ex-JUB">
-                                                                                    <rect key="frame" x="0.0" y="4" width="195" height="16"/>
-                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="6va-Xd-pDF">
-                                                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                                    </textFieldCell>
-                                                                                </textField>
+                                                                                <scrollView identifier="TermsScroller" fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="fef-04-t7y" customClass="KosAnnotationScrollView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
+                                                                                    <rect key="frame" x="-3906" y="-8" width="8007" height="41"/>
+                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                    <clipView key="contentView" id="cj3-Jx-sgA">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="8007" height="41"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                        <subviews>
+                                                                                            <textView importsGraphics="NO" verticallyResizable="YES" fieldEditor="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" spellingCorrection="YES" id="I2y-RR-etU" customClass="TermTextView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="8007" height="41"/>
+                                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                                <color key="backgroundColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
+                                                                                                <size key="minSize" width="200" height="41"/>
+                                                                                                <size key="maxSize" width="1000" height="100"/>
+                                                                                                <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                            </textView>
+                                                                                        </subviews>
+                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    </clipView>
+                                                                                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="5k9-n8-W5l">
+                                                                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7SD-uB-yfi">
+                                                                                        <rect key="frame" x="-100" y="-100" width="15" height="135"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                </scrollView>
                                                                             </subviews>
                                                                             <connections>
-                                                                                <outlet property="textField" destination="0WC-ex-JUB" id="8v7-hY-XQz"/>
+                                                                                <outlet property="textView" destination="I2y-RR-etU" id="Le8-nc-eYz"/>
                                                                             </connections>
                                                                         </tableCellView>
                                                                     </prototypeCellViews>
@@ -829,7 +848,7 @@
                                                         </tableView>
                                                     </subviews>
                                                 </clipView>
-                                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="K7U-AE-Lpy">
+                                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="K7U-AE-Lpy">
                                                     <rect key="frame" x="1" y="373" width="722" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>

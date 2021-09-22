@@ -57,65 +57,62 @@ extension CMTViewController: NSTableViewDelegate {
         guard let item = tableData?[row] else { return nil }
         
         if let tableColumn = tableColumn { cellIdentifier = CellIdentifiers(rawValue: String(describing: tableColumn.identifier.rawValue)) }
-        else                             {
-            cellIdentifier = CellIdentifiers.titleRow } // When "groupRow" is true there is no column, so use first column whatever that is
+        else                             { cellIdentifier = CellIdentifiers.titleRow } // When "groupRow" is true there is no column, so use first column whatever that is
 
         if let _ = item.title { cellIdentifier = CellIdentifiers.titleRow } // hack
         
         guard let cellIdentifier = cellIdentifier else { return nil }
         
-    //    var cell = cellIdentifier == CellIdentifiers.titleRow
-    //        ? tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? SentenceTableTitleRowCellView
-    //        : tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView
-        
-       /*
-        
         print("Cell identifier: \(cellIdentifier)")
-        
-        if cellIdentifier == .termsCell && false {
-            
-            if let cell3 = tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? TermTextView
-            {
-                //   cell3.addHandlers()
-                cell3.parent = self
-                cell3.textStorage?.setAttributedString(myDensSeeItem!.freqStr)
-                
-                //         cell3.twiddle.stringValue = "▼"
-                //  cell = cell3
-                return cell3
-            }
-            
-        } else {
-        
-        */
-
+    
         if var cell = tableView.makeView(withIdentifier: cellIdentifier.uiiId, owner: nil) as? NSTableCellView {
             
             switch cellIdentifier {
             
             case .pageCell:     text = item.page?.description ?? "page unk"; break
             case .commentCell:  text = item.comment ?? "comment unk"; break
-            case .termsCell:    aText = myDensSeeItem?.freqStr; print(aText); break
+            case .termsCell:    aText = myDensSeeItem?.freqStr; break
             case .titleRow:     text = item.title ?? "title unk"
                 var attributes = [NSAttributedString.Key: AnyObject]()
                 attributes[.foregroundColor] = NSColor.white
                 attributes[.font] = NSFont.boldSystemFont(ofSize: 13.0)
                 aText = NSAttributedString(string: text, attributes: attributes)
-                //       let cell2 = TintedTableCellView()
+                
                 // https://stackoverflow.com/questions/53868435/how-to-create-a-custom-nstablecellview-from-a-nib
-                if let cell3 = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("TintedTableCellView"), owner: nil) as? TintedTableCellView
+                if let rowCell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("TintedTableCellView"), owner: nil) as? TintedTableCellView
                 {
-                    cell3.addHandlers()
-                    cell3.parent = self
-                    cell3.title.attributedStringValue = aText!
+                    rowCell.addHandlers()
+                    rowCell.parent = self
+                    rowCell.title.attributedStringValue = aText!
            //         cell3.twiddle.stringValue = "▼"
-                    cell = cell3
+                    cell = rowCell
                 }
             }
             
-            if let aText = aText { cell.textField?.attributedStringValue = aText }
-            else                 { cell.textField?.stringValue = text }
+            if (cellIdentifier == .termsCell), let aText = aText
+            {
+                if let textViewCell = cell as? TextViewTableCellView {
+                    textViewCell.textView.parent = self
+                    textViewCell.textView.row = row
+                    textViewCell.textView.backgroundColor = NSColor.systemTeal
+                    textViewCell.textView.textStorage!.setAttributedString(aText)
+                    //textViewCell.textView.textStorage?.setAttributedString(NSAttributedString(string: "hello world..."))
+                    if true {
+                        var b = textViewCell.textView.frame
+                        //                    b.size.width = showSingleRowInTermsTable ? 8000 : densSeePaneBase.bounds.width
+                        //          b.size.width = densSeePaneBase.bounds.width
+                        b.size.width = 400
+                        b.size.width = tableView.bounds.width
+                //        textViewCell.textView.frame = b
+                    }
+                    cell = textViewCell
+                }
+                
+            } else {
             
+                if let aText = aText { cell.textField?.attributedStringValue = aText }
+                else                 { cell.textField?.stringValue = text }
+            }
             return cell
         }
         return nil

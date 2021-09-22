@@ -131,16 +131,17 @@ extension CMTViewController {
 
         print("Row clicked: \(row)")
         
-        let location = event.locationInWindow
-        print("Location in view: \(location)")
+        let clickLocationInApp = event.locationInWindow
+        print("Click Location in app: \(clickLocationInApp)")
         
-        let textViewlocation = self.view.window?.contentView?.convert(location, to: textView)
-        print("Text View Location in view: \(textViewlocation)")
+        let clickLocationInTextView = self.view.window?.contentView?.convert(clickLocationInApp, to: textView)
+        print("Click Location in TermTextView: \(clickLocationInTextView)")
         
-        let index = textView.characterIndexForInsertion(at: textViewlocation!)
+        let index = textView.characterIndexForInsertion(at: clickLocationInTextView!)
         print("Character index: \(index)")
         
         let text = textView.textStorage as! NSAttributedString
+        let textAsString = text.string
         
         var found = false
         var tterm:String? = nil
