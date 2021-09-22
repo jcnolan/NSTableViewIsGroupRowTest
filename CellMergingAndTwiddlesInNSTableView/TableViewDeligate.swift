@@ -84,7 +84,6 @@ extension CMTViewController: NSTableViewDelegate {
                     rowCell.addHandlers()
                     rowCell.parent = self
                     rowCell.title.attributedStringValue = aText!
-           //         cell3.twiddle.stringValue = "▼"
                     cell = rowCell
                 }
             }
@@ -101,11 +100,10 @@ extension CMTViewController: NSTableViewDelegate {
 //                    textViewCell.textView.textStorage!.setAttributedString(NSAttributedString(string: "Hello world..."))
                     
                     var b = textViewCell.textView.frame
-                    b = b.offsetBy(dx: 5.0, dy: 5.0)
+              //      b = b.offsetBy(dx: 5.0, dy: 5.0)
                     let col = tableView.tableColumn(withIdentifier: NSUserInterfaceItemIdentifier(cellIdentifier.rawValue))
                     let colWidth = col?.width
-                    //                    b.size.width = showSingleRowInTermsTable ? 8000 : densSeePaneBase.bounds.width
-                    //          b.size.width = densSeePaneBase.bounds.width
+                    // b.size.width = showSingleRowInTermsTable ? 8000 : densSeePaneBase.bounds.width
                     b.size.width = colWidth!
                     print("Colwidth: \(colWidth)")
                     textViewCell.textView.frame = b

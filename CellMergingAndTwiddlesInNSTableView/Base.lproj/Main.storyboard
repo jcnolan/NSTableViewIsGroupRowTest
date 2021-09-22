@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
-        <capability name="NSView safe area layout guides" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -810,18 +809,18 @@
                                                                             <rect key="frame" x="354" y="0.0" width="360" height="24"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <scrollView identifier="TermsScroller" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="fef-04-t7y" customClass="KosAnnotationScrollView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="360" height="24"/>
-                                                                                    <clipView key="contentView" copiesOnScroll="NO" id="cj3-Jx-sgA">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="24"/>
+                                                                                <scrollView identifier="TermsScroller" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="fef-04-t7y" customClass="KosAnnotationScrollView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="360" height="20"/>
+                                                                                    <clipView key="contentView" focusRingType="none" copiesOnScroll="NO" id="cj3-Jx-sgA">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="20"/>
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <subviews>
-                                                                                            <textView editable="NO" selectable="NO" importsGraphics="NO" verticallyResizable="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" spellingCorrection="YES" id="I2y-RR-etU" customClass="TermTextView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="360" height="24"/>
+                                                                                            <textView editable="NO" selectable="NO" importsGraphics="NO" verticallyResizable="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" id="I2y-RR-etU" customClass="TermTextView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="360" height="20"/>
                                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                 <color key="backgroundColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
-                                                                                                <size key="minSize" width="360" height="24"/>
+                                                                                                <size key="minSize" width="360" height="20"/>
                                                                                                 <size key="maxSize" width="1000" height="100"/>
                                                                                                 <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                                             </textView>
@@ -839,13 +838,11 @@
                                                                                 </scrollView>
                                                                             </subviews>
                                                                             <constraints>
-                                                                                <constraint firstItem="fef-04-t7y" firstAttribute="leading" secondItem="HEk-J8-pfS" secondAttribute="leading" id="RS7-TD-yfk"/>
-                                                                                <constraint firstItem="fef-04-t7y" firstAttribute="bottom" secondItem="HEk-J8-pfS" secondAttribute="bottom" id="Z4g-HD-snh"/>
-                                                                                <constraint firstItem="fef-04-t7y" firstAttribute="top" secondItem="HEk-J8-pfS" secondAttribute="top" id="w4Q-P2-Wjf"/>
-                                                                                <constraint firstItem="fef-04-t7y" firstAttribute="trailing" secondItem="HEk-J8-pfS" secondAttribute="trailing" id="y67-lP-VFT"/>
+                                                                                <constraint firstItem="fef-04-t7y" firstAttribute="leading" secondItem="BJu-s7-xz4" secondAttribute="leading" id="RS7-TD-yfk"/>
+                                                                                <constraint firstItem="fef-04-t7y" firstAttribute="bottom" secondItem="BJu-s7-xz4" secondAttribute="bottom" id="Z4g-HD-snh"/>
+                                                                                <constraint firstItem="fef-04-t7y" firstAttribute="top" secondItem="BJu-s7-xz4" secondAttribute="top" constant="4" id="w4Q-P2-Wjf"/>
+                                                                                <constraint firstItem="fef-04-t7y" firstAttribute="trailing" secondItem="BJu-s7-xz4" secondAttribute="trailing" id="y67-lP-VFT"/>
                                                                             </constraints>
-                                                                            <viewLayoutGuide key="safeArea" id="HEk-J8-pfS"/>
-                                                                            <viewLayoutGuide key="layoutMargins" id="3KX-Sr-LIG"/>
                                                                             <connections>
                                                                                 <outlet property="textView" destination="I2y-RR-etU" id="Le8-nc-eYz"/>
                                                                             </connections>
