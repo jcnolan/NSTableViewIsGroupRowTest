@@ -97,15 +97,21 @@ extension CMTViewController: NSTableViewDelegate {
                     textViewCell.textView.backgroundColor = NSColor.systemTeal
                     textViewCell.textView.textStorage!.setAttributedString(aText)
                     //textViewCell.textView.textStorage?.setAttributedString(NSAttributedString(string: "hello world..."))
-                    if true {
+             //       if true {
                         var b = textViewCell.textView.frame
+                        let col = tableView.tableColumn(withIdentifier: NSUserInterfaceItemIdentifier(cellIdentifier.rawValue))
+                        let colWidth = col?.width
                         //                    b.size.width = showSingleRowInTermsTable ? 8000 : densSeePaneBase.bounds.width
                         //          b.size.width = densSeePaneBase.bounds.width
-                        b.size.width = 400
-                        b.size.width = tableView.bounds.width
-                //        textViewCell.textView.frame = b
-                    }
+                        b.size.width = colWidth!
+                        print("Colwidth: \(colWidth)")
+                     //   b.size.width = 400
+                   //  b.size.width = tableView.bounds.width
+                        textViewCell.textView.frame = b
+               //     }
                     cell = textViewCell
+               //     cell.textField?.frame = b
+              //      cell.frame = b
                 }
                 
             } else {

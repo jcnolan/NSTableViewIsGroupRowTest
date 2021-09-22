@@ -66,6 +66,11 @@ class CMTViewController: NSViewController {
         myDensSeeItem = DensSeeTermHelper.getDensSeeItemForFreqs(myTermFreqsForPage: myTermFreqs, mySearchTermFreqsForPage: mySearchTermFreqs)
     }
     
+    @IBAction func onRefresh(_ sender: Any) {
+        
+        tableView.reloadData()
+    }
+    
     @IBAction func onTest(_ sender: Any) {
         
         links.textStorage?.setAttributedString(NSAttributedString(string: "Hello world..."))

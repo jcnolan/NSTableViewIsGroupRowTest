@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "CMTViewController.tableView(_:viewFor:row:):TableViewDeligate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "textViewCell.textView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "TermTextView.mouseDown(with:):TermTextView.swift">
       </ContextState>
       <ContextState
