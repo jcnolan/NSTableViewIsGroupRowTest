@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="NSView safe area layout guides" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -716,13 +717,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="724" height="393"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <scrollView autohidesScrollers="YES" horizontalLineScroll="24" horizontalPageScroll="10" verticalLineScroll="24" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gB-ez-8DI">
+                                            <scrollView autohidesScrollers="YES" horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gB-ez-8DI">
                                                 <rect key="frame" x="0.0" y="0.0" width="724" height="393"/>
                                                 <clipView key="contentView" id="KAq-Vt-l3J">
                                                     <rect key="frame" x="1" y="1" width="722" height="391"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" id="nY1-Dr-zvo">
+                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" viewBased="YES" id="nY1-Dr-zvo">
                                                             <rect key="frame" x="0.0" y="0.0" width="723" height="391"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
@@ -781,7 +782,7 @@
                                                                                     <rect key="frame" x="0.0" y="4" width="198" height="16"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="HRL-19-uBm">
-                                                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                                                        <font key="font" metaFont="system"/>
                                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     </textFieldCell>
@@ -809,14 +810,14 @@
                                                                             <rect key="frame" x="354" y="0.0" width="360" height="24"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <scrollView identifier="TermsScroller" fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="fef-04-t7y" customClass="KosAnnotationScrollView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
+                                                                                <scrollView identifier="TermsScroller" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="fef-04-t7y" customClass="KosAnnotationScrollView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="360" height="21"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                    <clipView key="contentView" id="cj3-Jx-sgA">
+                                                                                    <clipView key="contentView" copiesOnScroll="NO" id="cj3-Jx-sgA">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="360" height="21"/>
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <subviews>
-                                                                                            <textView importsGraphics="NO" verticallyResizable="YES" fieldEditor="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" spellingCorrection="YES" id="I2y-RR-etU" customClass="TermTextView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
+                                                                                            <textView editable="NO" selectable="NO" importsGraphics="NO" verticallyResizable="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" spellingCorrection="YES" id="I2y-RR-etU" customClass="TermTextView" customModule="CellMergingAndTwiddlesInNSTableView" customModuleProvider="target">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="360" height="21"/>
                                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -838,6 +839,8 @@
                                                                                     </scroller>
                                                                                 </scrollView>
                                                                             </subviews>
+                                                                            <viewLayoutGuide key="safeArea" id="HEk-J8-pfS"/>
+                                                                            <viewLayoutGuide key="layoutMargins" id="3KX-Sr-LIG"/>
                                                                             <connections>
                                                                                 <outlet property="textView" destination="I2y-RR-etU" id="Le8-nc-eYz"/>
                                                                             </connections>

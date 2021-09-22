@@ -105,8 +105,8 @@ class CMTViewController: NSViewController {
         let customCellNib = NSNib.init(nibNamed: "TintedTableCellView", bundle: nil)
         tableView.register(customCellNib, forIdentifier: NSUserInterfaceItemIdentifier("TintedTableCellView"))
                 
-    //    tableView.target = self
-    //    tableView.action = #selector(onItemClicked)
+        tableView.target = self
+        tableView.action = #selector(onItemClicked)
         
         setDensSeeItem()
         links.parent = self

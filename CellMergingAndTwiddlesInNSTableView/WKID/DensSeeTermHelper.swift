@@ -88,6 +88,9 @@ class DensSeeTermHelper {
         
         let searchActive = mySearchTermFreqsForPage != nil
         
+        let textColor           = NSColor.black.adjusted
+        let textBackgroundColor = NSColor.clear
+
         for (myTerm, myFreqs) in mySortedFreqsPerPage {
             
             //      Build a string from those terms
@@ -103,7 +106,7 @@ class DensSeeTermHelper {
                     myDensSeeItem.searchTermFound = true
                 } else {
                     if (myDensSeeItem.constrainBySearch) { myMAStr = NSMutableAttributedString(string:"") }
-                    else                                 { myMAStr = KosTextDecoration.colored(myMAStr, foreground: NSColor.systemGray, background: NSColor.clear) }
+                    else                                 { myMAStr = KosTextDecoration.colored(myMAStr, foreground: textColor, background: textBackgroundColor) }
                 }
             }
             
