@@ -101,7 +101,7 @@ extension CMTViewController: NSTableViewDelegate {
 //                    textViewCell.textView.textStorage!.setAttributedString(NSAttributedString(string: "Hello world..."))
                     
                     var b = textViewCell.textView.frame
-                    b = b.offsetBy(dx: -5.0, dy: -5.0)
+                    b = b.offsetBy(dx: 5.0, dy: 5.0)
                     let col = tableView.tableColumn(withIdentifier: NSUserInterfaceItemIdentifier(cellIdentifier.rawValue))
                     let colWidth = col?.width
                     //                    b.size.width = showSingleRowInTermsTable ? 8000 : densSeePaneBase.bounds.width

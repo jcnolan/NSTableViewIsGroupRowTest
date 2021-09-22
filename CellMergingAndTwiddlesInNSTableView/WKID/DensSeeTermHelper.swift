@@ -106,7 +106,10 @@ class DensSeeTermHelper {
                     myDensSeeItem.searchTermFound = true
                 } else {
                     if (myDensSeeItem.constrainBySearch) { myMAStr = NSMutableAttributedString(string:"") }
-                    else                                 { myMAStr = KosTextDecoration.colored(myMAStr, foreground: textColor, background: textBackgroundColor) }
+                    else                                 {
+                        myMAStr = KosTextDecoration.sized(myMAStr, fontSize: 13.0)
+                        myMAStr = KosTextDecoration.colored(myMAStr, foreground: textColor, background: textBackgroundColor)
+                    }
                 }
             }
             
